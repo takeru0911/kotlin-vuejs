@@ -6,7 +6,6 @@ import vue.*
  * Created by taker on 2015/09/26.
  */
 
-native public fun takeru(): String = noImpl
 @native("window")
 native val w: dynamic = noImpl
 
