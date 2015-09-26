@@ -73,7 +73,7 @@ class Vue (options: Any?){
     @native("\$compile")
     native fun `$compile`(element: HTMLElement): VueCallback = noImpl
     @native("\$addChild")
-    native fun `$addChild`(options: Any?, constructor: Any?): Vue = noImpl
+    native fun `$addChild`(options: Any, constructor: Any?): Vue = noImpl
     native fun _init(options: Any): Unit = noImpl
     native fun _cleanup(): Unit = noImpl
     companion object {
@@ -88,10 +88,8 @@ class Vue (options: Any?){
         fun require(module: String): Unit = noImpl
         fun use(plugin: Any, args: Any?): Vue = noImpl
     }
+
 }
-
-
-
 @native("VueConfig")
 class VueConfig {
     var prefix: String = noImpl
@@ -102,8 +100,6 @@ class VueConfig {
     var async: Boolean = noImpl
     var delimiters: Array<String> = noImpl
 }
-
-
 interface ValueCallback {
     native fun apply(newValue: Any, oldValue: Any): Unit = noImpl
 }
@@ -115,4 +111,3 @@ interface VueCallback {
 interface FilterCallback {
     native fun apply(value: Any, begin: Any?, end: Any?): Any = noImpl
 }
-

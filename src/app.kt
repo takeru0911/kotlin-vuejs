@@ -1,4 +1,5 @@
 import kotlin.browser.document
+import kotlin.js.internal
 
 import vue.*
 /**
@@ -6,16 +7,26 @@ import vue.*
  */
 
 native public fun takeru(): String = noImpl
-var hoge: Vue? = null
+@native("window")
+native val w: dynamic = noImpl
+
 fun main(args: Array<String>){
+    Vue.config.delimiters = arrayOf("{!", "!}")
     val option = json(
             Pair("el", "#app"),
-            Pair("data", json(
-                    Pair("takeru", "lksjf")
+            Pair("data",
+                    json(
+                            Pair("test", "")
+                    )
+            ),
+            Pair("methods",
+                    json(
+                            Pair("clickedResetBtn",{
+                                w.app.`$data`.test = ""
+                            })
+
             ))
     )
-    hoge = Vue(option)
 
-    console.log(hoge)
-
+    w.app = Vue(option)
 }
