@@ -1,0 +1,7 @@
+{
+  "name": "kotolin-vuejs",
+  "description": "",
+  "dependencies": {
+    "vue": "~0.12.4"
+  }
+}

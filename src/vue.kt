@@ -1,3 +1,4 @@
+package vue
 /**
  * Created by taker on 2015/09/26.
  */
@@ -114,5 +115,4 @@ interface VueCallback {
 interface FilterCallback {
     native fun apply(value: Any, begin: Any?, end: Any?): Any = noImpl
 }
-fun main(args: Array<String>){
-}
+
