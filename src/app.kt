@@ -27,5 +27,6 @@ fun main(args: Array<String>){
             ))
     )
 
+
     w.app = Vue(option)
 }

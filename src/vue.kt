@@ -1,6 +1,8 @@
 package vue
 /**
  * Created by taker on 2015/09/26.
+ * refer to https://github.com/ara-ta3/scalajs-vuejs-todo-app/blob/master/src/main/scala/scala/scalajs/vuejs/Vue.scala
+ * refer to https://github.com/freewind/kotlin-angularjs
  */
 
 import org.w3c.dom.HTMLElement
