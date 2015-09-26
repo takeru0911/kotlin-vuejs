@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    ここに入力したのが：<input type="text" v-model="test">
+    <br>
+    ここに反映されます：{!test!}
+    <br>
+    <button type="button" v-on="click: clickedResetBtn">reset</button>
+</div>
+</body>
+<script src="bower_components/vue/dist/vue.min.js"></script>
+<script src="out/production/kotlin-vuejs/lib/kotlin.js"></script>
+<script src="out/production/kotlin-vuejs/kotlin-vuejs.js"></script>
+</html>
