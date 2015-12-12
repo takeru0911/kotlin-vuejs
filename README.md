@@ -2,4 +2,4 @@
 kotlin-vuejs sample
 
 * [Kotlin](http://kotlinlang.org/)
- * cute
+ * かわいい
